@@ -27,59 +27,59 @@ If A is negative and B is 0: [[A]] --> STDOUT
 If A & B are both 0: HALT
 
 
-Negative Memory
-Address        Function
--1             IP (initially 0)
--2             NEXT (always IP+3)
--3             RETURN (initially 0, set to NEXT before any jump.)
--4             Register a
--5             Register b
--6             Register c
--7             Mode (activates a, b, c; then resets to 0)
--8             MaxPos memory size
--9             MaxNeg memory size
--10...         Data (user address computation: start from 0, add 10, negate)
+Negative Memory   
+Address        Function   
+-1             IP (initially 0)   
+-2             NEXT (always IP+3)   
+-3             RETURN (initially 0, set to NEXT before any jump.)   
+-4             Register a   
+-5             Register b   
+-6             Register c   
+-7             Mode (activates a, b, c; then resets to 0)   
+-8             MaxPos memory size   
+-9             MaxNeg memory size   
+-10...         Data (user address computation: start from 0, add 10, negate)    
 
 
-Coprocessor
-Mode      Function
-0         NOP
-1         c = ~b (bitwise not)
-2         c = b & a (bitwise and)
-3         c = b | a (bitwise or)
-4         c = b ^ a (bitwise xor)
-5         c = b << a (shift b left by a bits)
-6         c = b >> a (shift b right by a bits)
-7         sign of b   (+1, 0, -1)
-8         floor of b (integer)
-9         truncate b (round down, integer)
-10        c = b - a
-11        c = b + a
-12        c = b * a
-13        c = b // a (integer division)
-14        c = b % a (mod, integer remainder)
-15        c = b / a
-16        c = b to power of a
-17        c = a root of b
-18        c = log base b of a
-19        c = sin(b)
-20        c = cos(b)
-21        c = tan(b)
-22        c = asin(b)
-23        c = acos(b)
-24        c = atan(b)
-25        c = sinh(b)
-26        c = cosh(b)
-27        c = tanh(b)
-28        c = asinh(b)
-29        c = acosh(b)
-30        c = atanh(b)
-31        c = sqrt(b**2 + a**2)  (hypotenuse)
-32        a = pi, b = e, c = phi (golden ration)
-33        c radians <-- b degrees
-34        c degrees <-- b radians
-35        c = greatest common divisor of b and a
-36        c = a permutations of b items (unique)
-37        c = a combinations of b items (not unique)
-38        c = b! (integer factorial)
-39        c = sum of 0..b (integers, works with negatives)
+Coprocessor   
+Mode      Function    
+0         NOP   
+1         c = ~b (bitwise not)    
+2         c = b & a (bitwise and)   
+3         c = b | a (bitwise or)    
+4         c = b ^ a (bitwise xor)   
+5         c = b << a (shift b left by a bits)   
+6         c = b >> a (shift b right by a bits)    
+7         sign of b   (+1, 0, -1)   
+8         floor of b (integer)    
+9         truncate b (round down, integer)    
+10        c = b - a   
+11        c = b + a   
+12        c = b * a   
+13        c = b // a (integer division)   
+14        c = b % a (mod, integer remainder)    
+15        c = b / a   
+16        c = b to power of a   
+17        c = a root of b   
+18        c = log base b of a   
+19        c = sin(b)    
+20        c = cos(b)    
+21        c = tan(b)    
+22        c = asin(b)   
+23        c = acos(b)   
+24        c = atan(b)   
+25        c = sinh(b)   
+26        c = cosh(b)   
+27        c = tanh(b)   
+28        c = asinh(b)    
+29        c = acosh(b)    
+30        c = atanh(b)    
+31        c = sqrt(b**2 + a**2)  (hypotenuse)   
+32        a = pi, b = e, c = phi (golden ration)    
+33        c radians <-- b degrees   
+34        c degrees <-- b radians   
+35        c = greatest common divisor of b and a    
+36        c = a permutations of b items (unique)    
+37        c = a combinations of b items (not unique)    
+38        c = b! (integer factorial)    
+39        c = sum of 0..b (integers, works with negatives)    
