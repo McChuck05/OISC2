@@ -12,16 +12,16 @@ The sample code (posmem.o2c and negmem.o2c) prints the sign of a memory word, in
 
 Two word instruction:  A B
 
-If A & B are both positive: [B]=[B]-[A]
+If A & B are both positive: [B]=[B]-[A]  
 If A & B are both negative: [[B]]=[[B]]-[[A]]
 
-If A is positive and B is negative: IF [A] <= 0 Jump to |B|
+If A is positive and B is negative: IF [A] <= 0 Jump to |B|  
 If A is negative and B is positive: IF [[A]] <= 0 Jump to B
 
-If A is 0 and B is positive: STDIN --> [B]
+If A is 0 and B is positive: STDIN --> [B]  
 If A is 0 and B is negative: STDIN --> [[B]]
 
-If A is positive and B is 0: [A] --> STDOUT
+If A is positive and B is 0: [A] --> STDOUT  
 If A is negative and B is 0: [[A]] --> STDOUT
 
 If A & B are both 0: HALT
@@ -30,7 +30,7 @@ If A & B are both 0: HALT
 Negative Memory   
 Address        Function   
 -1             IP (initially 0)   
--2             NEXT (always IP+3)   
+-2             NEXT (always IP+2)   
 -3             RETURN (initially 0, set to NEXT before any jump.)   
 -4             Register a   
 -5             Register b   
